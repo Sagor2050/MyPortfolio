@@ -18,7 +18,7 @@
             <ul class="nav">
                 <li><a href="#home" class="active">Home</a></li> <!-- Navigation links -->
                 <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#resume">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -36,7 +36,7 @@
                     <img src="photo.jpeg" alt="Sagor Sutra Dhor" class="profile-pic">
                     <h1>Hello!<br>I'm <span>Sagor Sutra Dhor</span></h1>
                     <h2>A Computer Science Student</h2>
-                    <button class="btn"> Projects </button>
+                    <button onclick = "scrollToProjects()" class="btn"> Projects </button>
                     <button onclick = "openPDF()" class="btn">Resume</button>
                 </div>
             </section>
@@ -81,7 +81,6 @@
                         <p>2015 - 2017</p>
                     </li>
                 </ul>
-                <a href="resume.pdf" download="resume.pdf" class="link">Download Resume</a>
             </section>
 
             <!-- Skills section -->
@@ -109,7 +108,9 @@
                         </li>
                         <li>
                             <p class = "project-heading">Weather App </p>
-                            <p>A weather forecast application using React.js and OpenWeather API to provide real-time weather data.</p>
+                            <p>A weather forecast application to provide real-time weather data.</p>
+                            <p>Utilized React.js and OpenWeather API; handled 1000+ API requests daily and managed state in a
+                                complex React application with 20+ components.Provided accurate weather information for over 200 cities</p>
                         </li>
                     </ul>
                 </div>
@@ -119,10 +120,13 @@
                         <li>
                             <p class = "project-heading">RESTful API for E-commerce </p>
                             <p>Developed a RESTful API using Node.js and Express.js for an e-commerce application, including user authentication and product management.</p>
+                            <p>Implemented secure authentication with JWT and bcrypt, and created CRUD endpoints for products.
+                                Achieved a scalable and secure API, enhancing user experience and integration with the front-end.</p>
                         </li>
                         <li>
                             <p class = "project-heading">Chat Application (Work in Progress)</p>
                             <p>A real-time chat application using Python and Flask, with WebSocket for live messaging features.</p>
+                            <p>Handled 10,000+ messages daily with a real-time update interface.</p>
                         </li>
                     </ul>
                 </div>
