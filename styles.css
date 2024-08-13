@@ -1,0 +1,251 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text-color);
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav li {
+    margin-bottom: 20px;
+}
+
+.nav li a {
+    color: var(--sidebar-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.nav li a:hover, .nav li a.active {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+.project-heading{
+    font-size: 24px;
+    color: rgb(11, 186, 125);
+}
+.btn{
+    cursor: pointer;
+    box-shadow: 3px 3px 5px gray;
+}
+
+#dark-mode-toggle {
+    margin-top: auto;
+    padding: 10px;
+    background: var(--button-bg);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #000000;
+    --sidebar-bg: #ffffff;
+    --sidebar-text-color: #000000;
+    --primary-color: #6200ea;
+    --secondary-color: #ffffff;
+    --button-bg: #6200ea;
+    --button-text-color: #ffffff;
+}
+
+.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --sidebar-bg: #1e1e1e;
+    --sidebar-text-color: #ffffff;
+    --primary-color: #bb86fc;
+    --secondary-color: #333333;
+    --button-bg: #bb86fc;
+    --button-text-color: #000000;
+}
+
+/* Content Styling */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background: var(--button-bg);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: var(--button-text-color);
+    color: var(--button-bg);
+}
+
+.box {
+    background: var(--secondary-color);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.box h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.box p, .box ul {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+#contact ul li {
+    padding-bottom: 15px; /* Adjust the value to your preference */
+}
+
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav li {
+        margin-bottom: 10px;
+    }
+
+    .nav li a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 0;
+    }
+
+    #dark-mode-toggle {
+        margin: 0;
+        padding: 5px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero .btn {
+        padding: 8px 16px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
