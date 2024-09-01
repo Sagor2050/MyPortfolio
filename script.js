@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function openPDF() {
-    window.open('resume.pdf', '_blank');
+    window.open('resumeNew.pdf', '_blank');
 }
 
 function scrollToProjects() {
