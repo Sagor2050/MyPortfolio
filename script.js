@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function openPDF() {
-    window.open('resumeNew.pdf', '_blank');
+    window.open('Sagor Sutra Dhor.pdf', '_blank');
 }
 
 function scrollToProjects() {
