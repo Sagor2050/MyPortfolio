@@ -15,6 +15,21 @@ Completed foundation work:
 - Reusable design system primitives and section components
 - Light/dark theme toggle with persistent preference
 - Framer Motion reveal primitives with reduced-motion support
+- Sanity CMS configuration, schemas, query helpers, and embedded Studio route
+
+## Sanity CMS
+
+The app falls back to local resume-derived content until a Sanity project is connected.
+
+Create `.env.local` from `.env.example` and set:
+
+```bash
+NEXT_PUBLIC_SANITY_PROJECT_ID=
+NEXT_PUBLIC_SANITY_DATASET=production
+NEXT_PUBLIC_SANITY_API_VERSION=2026-07-30
+```
+
+Once configured, Sanity Studio is available at `/studio`.
 
 ## Commands
 

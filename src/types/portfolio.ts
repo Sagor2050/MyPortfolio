@@ -58,3 +58,13 @@ export type Profile = {
   portraitSrc: string;
   links: Link[];
 };
+
+export type PortfolioContent = {
+  education: Education[];
+  experience: Experience[];
+  honors: Honor[];
+  navigation: readonly Link[];
+  profile: Profile;
+  projects: Project[];
+  skillGroups: SkillGroup[];
+};

@@ -3,6 +3,7 @@ import type {
   Experience,
   Honor,
   Profile,
+  PortfolioContent,
   Project,
   SkillGroup
 } from "@/types/portfolio";
@@ -158,3 +159,13 @@ export const navigation = [
   { label: "Honors", href: "#honors" },
   { label: "Contact", href: "#contact" }
 ] as const;
+
+export const fallbackPortfolioContent: PortfolioContent = {
+  education,
+  experience,
+  honors,
+  navigation,
+  profile,
+  projects,
+  skillGroups
+};

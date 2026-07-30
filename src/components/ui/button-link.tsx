@@ -14,9 +14,10 @@ type ButtonLinkProps = {
 };
 
 const variantClasses = {
-  primary: "border-transparent bg-[var(--foreground)] text-[var(--background)] hover:bg-[var(--accent)]",
+  primary:
+    "border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)] shadow-sm shadow-black/10 hover:border-[var(--accent-strong)] hover:bg-[var(--accent-strong)]",
   secondary: "border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] hover:border-[var(--foreground)]",
-  ghost: "border-transparent text-[var(--muted)] hover:bg-[var(--surface)] hover:text-[var(--foreground)]"
+  ghost: "border-[var(--border)] bg-transparent text-[var(--foreground)] hover:bg-[var(--surface)]"
 };
 
 const sizeClasses = {

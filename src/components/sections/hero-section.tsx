@@ -1,26 +1,21 @@
 import Image from "next/image";
 import { Download, ExternalLink, Mail } from "lucide-react";
-import type { Education, Experience, Profile, Project, SkillGroup } from "@/types/portfolio";
+import type { Education, Profile } from "@/types/portfolio";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Badge } from "@/components/ui/badge";
-import { Metric } from "@/components/ui/metric";
 
 type HeroSectionProps = {
   education: Education[];
-  experience: Experience[];
   profile: Profile;
-  projects: Project[];
-  skillGroups: SkillGroup[];
 };
 
-export function HeroSection({ education, experience, profile, projects, skillGroups }: HeroSectionProps) {
+export function HeroSection({ education, profile }: HeroSectionProps) {
   const expectedGraduation = education[0]?.details.find((detail) => detail.startsWith("Expected Graduation"))?.replace("Expected Graduation: ", "");
   const institution = education[0]?.institution.replace("City University of New York (CUNY) - ", "") ?? "Brooklyn College";
   const github = profile.links.find((link) => link.label === "GitHub");
   const linkedin = profile.links.find((link) => link.label === "LinkedIn");
-  const skillCount = skillGroups.reduce((total, group) => total + group.items.length, 0);
 
   return (
     <section id="top" className="relative overflow-hidden border-b border-[var(--border)] py-16 sm:py-20 lg:py-24">
@@ -38,25 +33,24 @@ export function HeroSection({ education, experience, profile, projects, skillGro
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)]">{profile.summary}</p>
 
-              <div className="mt-9 flex flex-wrap gap-3">
-                <ButtonLink href={profile.resumeHref} icon={Download}>
-                  Resume
+              <div className="mt-9 flex flex-wrap gap-3" aria-label="Primary actions">
+                <ButtonLink href={profile.resumeHref} icon={Download} variant="primary">
+                  Download resume
                 </ButtonLink>
                 <ButtonLink href={`mailto:${profile.email}`} icon={Mail} variant="secondary">
-                  Email
-                </ButtonLink>
-                <ButtonLink href={linkedin?.href ?? "#"} external icon={ExternalLink} variant="ghost">
-                  LinkedIn
-                </ButtonLink>
-                <ButtonLink href={github?.href ?? "#"} external icon={ExternalLink} variant="ghost">
-                  GitHub
+                  Email me
                 </ButtonLink>
               </div>
 
-              <div className="mt-12 grid gap-5 sm:grid-cols-3">
-                <Metric label="Research and teaching roles" value={`${experience.length}`} />
-                <Metric label="Selected projects" value={`${projects.length}`} />
-                <Metric label="Technical skills" value={`${skillCount}`} />
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-[var(--muted)]">
+                <a className="inline-flex items-center gap-2 hover:text-[var(--foreground)]" href={linkedin?.href ?? "#"} rel="noreferrer" target="_blank">
+                  <ExternalLink aria-hidden="true" className="size-4" />
+                  LinkedIn
+                </a>
+                <a className="inline-flex items-center gap-2 hover:text-[var(--foreground)]" href={github?.href ?? "#"} rel="noreferrer" target="_blank">
+                  <ExternalLink aria-hidden="true" className="size-4" />
+                  GitHub
+                </a>
               </div>
             </div>
           </Reveal>
