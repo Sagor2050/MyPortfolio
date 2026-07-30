@@ -155,5 +155,6 @@ export const navigation = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Honors", href: "#honors" },
   { label: "Contact", href: "#contact" }
 ] as const;

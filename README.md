@@ -6,12 +6,15 @@ This repository is being migrated from a static HTML/CSS/JavaScript site to a mo
 
 ## Current Phase
 
-PR 1 and PR 2 foundation work:
+Completed foundation work:
 
 - Next.js App Router project structure
 - TypeScript and Tailwind CSS setup
 - Local typed content inventory extracted from `public/SagorS.Dhor_Resume.pdf`
 - Legacy static site preserved in `legacy/static-site/`
+- Reusable design system primitives and section components
+- Light/dark theme toggle with persistent preference
+- Framer Motion reveal primitives with reduced-motion support
 
 ## Commands
 
