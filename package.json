@@ -10,7 +10,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "sanity:seed": "tsx scripts/write-sanity-seed.ts",
+    "sanity:import": "sanity dataset import sanity/seed/portfolio.ndjson production --replace"
   },
   "dependencies": {
     "@sanity/client": "^7.26.0",
@@ -45,6 +47,7 @@
     "eslint-config-next": "^16.2.12",
     "postcss": "^8.5.25",
     "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.1",
     "typescript": "^6.0.3"
   }
 }
