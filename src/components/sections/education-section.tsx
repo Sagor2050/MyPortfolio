@@ -40,7 +40,7 @@ export function EducationSection({ education, skillGroups }: EducationSectionPro
             <div className="mt-6 space-y-6">
               {skillGroups.map((group, index) => (
                 <div key={group.label}>
-                  <p className="text-sm font-semibold text-[var(--muted)]">{group.label}</p>
+                  <p className="text-sm font-semibold text-[color:var(--muted)]">{group.label}</p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {group.items.map((item) => (
                       <Badge key={item} tone={skillTones[index % skillTones.length]}>

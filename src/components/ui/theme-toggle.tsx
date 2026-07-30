@@ -12,7 +12,7 @@ export function ThemeToggle() {
   return (
     <button
       aria-label="Toggle color theme"
-      className="inline-grid size-10 place-items-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition hover:border-[var(--foreground)] hover:text-[var(--foreground)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+      className="inline-grid size-10 place-items-center rounded-md border border-[var(--border)] bg-[var(--surface)] text-[color:var(--muted)] transition hover:border-[var(--foreground)] hover:text-[color:var(--foreground)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
       onClick={() => {
         const nextTheme = getActiveTheme() === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = nextTheme;

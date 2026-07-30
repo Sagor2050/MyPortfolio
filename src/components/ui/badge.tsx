@@ -8,11 +8,11 @@ type BadgeProps = {
 };
 
 const toneClasses = {
-  neutral: "border-[var(--border)] bg-[var(--surface)] text-[var(--muted)]",
-  teal: "border-[color-mix(in_srgb,var(--accent)_40%,var(--border))] bg-[color-mix(in_srgb,var(--accent)_9%,var(--surface))] text-[var(--accent-strong)]",
-  amber: "border-[color-mix(in_srgb,var(--amber)_38%,var(--border))] bg-[color-mix(in_srgb,var(--amber)_10%,var(--surface))] text-[var(--amber-strong)]",
-  plum: "border-[color-mix(in_srgb,var(--plum)_36%,var(--border))] bg-[color-mix(in_srgb,var(--plum)_8%,var(--surface))] text-[var(--plum-strong)]",
-  coral: "border-[color-mix(in_srgb,var(--coral)_38%,var(--border))] bg-[color-mix(in_srgb,var(--coral)_9%,var(--surface))] text-[var(--coral-strong)]"
+  neutral: "border-[var(--border)] bg-[var(--surface)] text-[color:var(--muted)]",
+  teal: "border-[color-mix(in_srgb,var(--accent)_40%,var(--border))] bg-[color-mix(in_srgb,var(--accent)_9%,var(--surface))] text-[color:var(--accent-strong)]",
+  amber: "border-[color-mix(in_srgb,var(--amber)_38%,var(--border))] bg-[color-mix(in_srgb,var(--amber)_10%,var(--surface))] text-[color:var(--amber-strong)]",
+  plum: "border-[color-mix(in_srgb,var(--plum)_36%,var(--border))] bg-[color-mix(in_srgb,var(--plum)_8%,var(--surface))] text-[color:var(--plum-strong)]",
+  coral: "border-[color-mix(in_srgb,var(--coral)_38%,var(--border))] bg-[color-mix(in_srgb,var(--coral)_9%,var(--surface))] text-[color:var(--coral-strong)]"
 };
 
 export function Badge({ children, className, tone = "neutral" }: BadgeProps) {

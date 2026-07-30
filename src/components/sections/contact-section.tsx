@@ -18,9 +18,9 @@ export function ContactSection({ profile }: ContactSectionProps) {
         <Reveal>
           <div className="grid gap-8 md:grid-cols-[0.85fr_1fr] md:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase text-[var(--accent-strong)]">Contact</p>
+              <p className="text-sm font-semibold uppercase text-[color:var(--accent-strong)]">Contact</p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">{profile.name}</h2>
-              <p className="mt-4 max-w-xl text-base leading-7 text-[var(--muted)]">{profile.summary}</p>
+              <p className="mt-4 max-w-xl text-base leading-7 text-[color:var(--muted)]">{profile.summary}</p>
             </div>
 
             <div className="flex flex-wrap gap-3 md:justify-end">

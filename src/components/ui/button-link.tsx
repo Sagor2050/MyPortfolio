@@ -14,10 +14,9 @@ type ButtonLinkProps = {
 };
 
 const variantClasses = {
-  primary:
-    "border-[var(--foreground)] bg-[var(--foreground)] text-[var(--background)] shadow-sm shadow-black/10 hover:border-[var(--accent-strong)] hover:bg-[var(--accent-strong)]",
-  secondary: "border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] hover:border-[var(--foreground)]",
-  ghost: "border-[var(--border)] bg-transparent text-[var(--foreground)] hover:bg-[var(--surface)]"
+  primary: "button-link-primary shadow-sm shadow-black/10",
+  secondary: "button-link-secondary",
+  ghost: "button-link-ghost"
 };
 
 const sizeClasses = {
@@ -37,7 +36,7 @@ export function ButtonLink({
   return (
     <a
       className={cn(
-        "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]",
+        "button-link inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]",
         variantClasses[variant],
         sizeClasses[size],
         className

@@ -4,6 +4,8 @@ Portfolio reconstruction in progress.
 
 This repository is being migrated from a static HTML/CSS/JavaScript site to a modern, content-driven portfolio built with Next.js App Router, React, TypeScript, Tailwind CSS, Framer Motion, Sanity CMS, and Vercel.
 
+Future AI agents and contributors should read [AGENTS.md](./AGENTS.md) before making changes.
+
 ## Current Phase
 
 Completed foundation work:
@@ -31,6 +33,18 @@ NEXT_PUBLIC_SANITY_API_VERSION=2026-07-30
 
 Once configured, Sanity Studio is available at `/studio`.
 
+Generate importable seed data from the local content with:
+
+```bash
+npm run sanity:seed
+```
+
+Import it into the configured `production` dataset with:
+
+```bash
+npm run sanity:import
+```
+
 ## Commands
 
 ```bash
@@ -38,4 +52,5 @@ npm run dev
 npm run build
 npm run lint
 npm run typecheck
+npm run sanity:seed
 ```

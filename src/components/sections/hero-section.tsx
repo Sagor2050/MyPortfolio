@@ -31,7 +31,7 @@ export function HeroSection({ education, profile }: HeroSectionProps) {
               <h1 className="mt-8 text-5xl font-semibold leading-[0.94] sm:text-6xl lg:text-7xl">
                 {profile.headline}
               </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--muted)]">{profile.summary}</p>
+              <p className="mt-7 max-w-2xl text-lg leading-8 text-[color:var(--muted)]">{profile.summary}</p>
 
               <div className="mt-9 flex flex-wrap gap-3" aria-label="Primary actions">
                 <ButtonLink href={profile.resumeHref} icon={Download} variant="primary">
@@ -42,12 +42,12 @@ export function HeroSection({ education, profile }: HeroSectionProps) {
                 </ButtonLink>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-[var(--muted)]">
-                <a className="inline-flex items-center gap-2 hover:text-[var(--foreground)]" href={linkedin?.href ?? "#"} rel="noreferrer" target="_blank">
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm font-medium text-[color:var(--muted)]">
+                <a className="inline-flex items-center gap-2 hover:text-[color:var(--foreground)]" href={linkedin?.href ?? "#"} rel="noreferrer" target="_blank">
                   <ExternalLink aria-hidden="true" className="size-4" />
                   LinkedIn
                 </a>
-                <a className="inline-flex items-center gap-2 hover:text-[var(--foreground)]" href={github?.href ?? "#"} rel="noreferrer" target="_blank">
+                <a className="inline-flex items-center gap-2 hover:text-[color:var(--foreground)]" href={github?.href ?? "#"} rel="noreferrer" target="_blank">
                   <ExternalLink aria-hidden="true" className="size-4" />
                   GitHub
                 </a>
@@ -73,7 +73,7 @@ export function HeroSection({ education, profile }: HeroSectionProps) {
                 <div className="grid grid-cols-[1fr_auto] items-end gap-4 border-t border-[var(--border)] p-4">
                   <div>
                     <p className="font-semibold">{profile.name}</p>
-                    <p className="mt-1 text-sm text-[var(--muted)]">Computer Science, {institution}</p>
+                    <p className="mt-1 text-sm text-[color:var(--muted)]">Computer Science, {institution}</p>
                   </div>
                   <Badge tone="plum">AI + full-stack</Badge>
                 </div>

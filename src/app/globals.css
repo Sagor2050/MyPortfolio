@@ -89,6 +89,49 @@ a {
   text-decoration: none;
 }
 
+.button-link {
+  border-color: var(--button-link-border);
+  background: var(--button-link-bg);
+  color: var(--button-link-color);
+}
+
+.button-link span,
+.button-link svg {
+  color: currentColor;
+}
+
+.button-link-primary {
+  --button-link-bg: var(--foreground);
+  --button-link-border: var(--foreground);
+  --button-link-color: var(--background);
+}
+
+.button-link-primary:hover {
+  --button-link-bg: var(--accent-strong);
+  --button-link-border: var(--accent-strong);
+  --button-link-color: var(--background);
+}
+
+.button-link-secondary {
+  --button-link-bg: var(--surface);
+  --button-link-border: var(--border);
+  --button-link-color: var(--foreground);
+}
+
+.button-link-secondary:hover {
+  --button-link-border: var(--foreground);
+}
+
+.button-link-ghost {
+  --button-link-bg: transparent;
+  --button-link-border: var(--border);
+  --button-link-color: var(--foreground);
+}
+
+.button-link-ghost:hover {
+  --button-link-bg: var(--surface);
+}
+
 button,
 input,
 textarea,
