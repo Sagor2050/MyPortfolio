@@ -1,40 +1,23 @@
-# 🌐 MyPortfolio
+# MyPortfolio
 
-A modern and responsive personal portfolio website built using **HTML**, **CSS**, and **JavaScript**.
+Portfolio reconstruction in progress.
 
-![MyPortfolio Preview](https://user-images.githubusercontent.com/your-username/your-image.png) <!-- (Optional image preview) -->
+This repository is being migrated from a static HTML/CSS/JavaScript site to a modern, content-driven portfolio built with Next.js App Router, React, TypeScript, Tailwind CSS, Framer Motion, Sanity CMS, and Vercel.
 
-## 🧠 About
+## Current Phase
 
-This portfolio showcases my skills, background, and recent projects. It’s designed with a focus on simplicity, performance, and clear presentation of my work.
+PR 1 and PR 2 foundation work:
 
-- 💼 Includes About, Projects, and Contact sections
-- 🌙 Dark-themed for a sleek modern look
-- 📱 Fully responsive and mobile-friendly
+- Next.js App Router project structure
+- TypeScript and Tailwind CSS setup
+- Local typed content inventory extracted from `public/SagorS.Dhor_Resume.pdf`
+- Legacy static site preserved in `legacy/static-site/`
 
-## 🛠️ Tech Stack
-
-- **HTML5** – semantic structure
-- **CSS3** – modern styling, flexbox, media queries
-- **JavaScript** – interactive elements, navbar, form behavior
-
-## 📸 Features
-
-- Animated navbar with smooth scrolling
-- Project showcase cards with hover effects
-- Social links and contact form
-- Clean, modular code easy to expand or maintain
-
-## 🚀 Live Demo
-
-🔗 [Visit Website](https://sagor2050.github.io/MyPortfolio)
-
-## 📁 Project Structure
+## Commands
 
 ```bash
-MyPortfolio/
-├── index.html
-├── style.css
-├── script.js
-└── assets/
-    └── images, icons, etc.
+npm run dev
+npm run build
+npm run lint
+npm run typecheck
+```
