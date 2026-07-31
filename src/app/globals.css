@@ -1,25 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5f0;
-  --foreground: #171717;
-  --muted: #5f6368;
-  --surface: #ffffff;
-  --surface-strong: #111111;
-  --border: #ddd7cc;
-  --accent: #0f766e;
+  --background: #f6f2ea;
+  --foreground: #151515;
+  --muted: #66615a;
+  --surface: #fffdf8;
+  --surface-alt: #ece8df;
+  --border: #d8d0c2;
+  --accent: #128274;
+  --accent-strong: #08665a;
+  --amber: #c38a32;
+  --amber-strong: #815617;
+  --plum: #6b5ad7;
+  --plum-strong: #4e3fb5;
+  --coral: #d55a3d;
+  --coral-strong: #9f341f;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --background: #0d0f10;
-    --foreground: #f7f4ec;
-    --muted: #a2a9ae;
-    --surface: #15181a;
-    --surface-strong: #f7f4ec;
-    --border: #293033;
+    --foreground: #f7f3ea;
+    --muted: #a9a198;
+    --surface: #151718;
+    --surface-alt: #1d2021;
+    --border: #303232;
     --accent: #5eead4;
+    --accent-strong: #7cf7e2;
+    --amber: #e0a84d;
+    --amber-strong: #f1c36c;
+    --plum: #998cff;
+    --plum-strong: #b5adff;
+    --coral: #ff8066;
+    --coral-strong: #ffa18d;
+    color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --background: #0d0f10;
+  --foreground: #f7f3ea;
+  --muted: #a9a198;
+  --surface: #151718;
+  --surface-alt: #1d2021;
+  --border: #303232;
+  --accent: #5eead4;
+  --accent-strong: #7cf7e2;
+  --amber: #e0a84d;
+  --amber-strong: #f1c36c;
+  --plum: #998cff;
+  --plum-strong: #b5adff;
+  --coral: #ff8066;
+  --coral-strong: #ffa18d;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -34,10 +72,16 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34rem),
+    linear-gradient(90deg, color-mix(in srgb, var(--border) 42%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--surface-alt) 72%, transparent), transparent 24rem),
     var(--background);
+  background-size: 48px 48px, 100% 100%, auto;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -45,6 +89,87 @@ a {
   text-decoration: none;
 }
 
+.button-link {
+  border-color: var(--button-link-border);
+  background: var(--button-link-bg);
+  color: var(--button-link-color);
+}
+
+.button-link span,
+.button-link svg {
+  color: currentColor;
+}
+
+.button-link-primary {
+  --button-link-bg: var(--foreground);
+  --button-link-border: var(--foreground);
+  --button-link-color: var(--background);
+}
+
+.button-link-primary:hover {
+  --button-link-bg: var(--accent-strong);
+  --button-link-border: var(--accent-strong);
+  --button-link-color: var(--background);
+}
+
+.button-link-secondary {
+  --button-link-bg: var(--surface);
+  --button-link-border: var(--border);
+  --button-link-color: var(--foreground);
+}
+
+.button-link-secondary:hover {
+  --button-link-border: var(--foreground);
+}
+
+.button-link-ghost {
+  --button-link-bg: transparent;
+  --button-link-border: var(--border);
+  --button-link-color: var(--foreground);
+}
+
+.button-link-ghost:hover {
+  --button-link-bg: var(--surface);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 ::selection {
   background: color-mix(in srgb, var(--accent) 32%, transparent);
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-150%);
+  border-radius: 0.375rem;
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.theme-toggle-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle-sun {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle-moon {
+  display: none;
 }
